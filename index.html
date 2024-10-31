@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Techscription</title>
   <style>
+
     /* Basic Reset */
     * {
       margin: 0;
@@ -32,6 +33,7 @@
       color: #ffdd44;
       text-shadow: 0 0 10px #ffdd44, 0 0 20px #ffa500;
       animation: glow 1.5s infinite alternate;
+      text-align: center;
     }
 
     /* Crackers (small dots with animation) */
@@ -77,6 +79,25 @@
     .cracker:nth-child(4) { --x: 90px; --y: 60px; }
     .cracker:nth-child(5) { --x: -80px; --y: 40px; }
     .cracker:nth-child(6) { --x: 120px; --y: -40px; }
+
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+      }
+      .cracker {
+        width: 8px;
+        height: 8px;
+      }
+      /* Adjust cracker positions for smaller screens */
+      .cracker:nth-child(1) { --x: -70px; --y: -70px; }
+      .cracker:nth-child(2) { --x: 40px; --y: -60px; }
+      .cracker:nth-child(3) { --x: -40px; --y: 80px; }
+      .cracker:nth-child(4) { --x: 70px; --y: 40px; }
+      .cracker:nth-child(5) { --x: -60px; --y: 30px; }
+      .cracker:nth-child(6) { --x: 90px; --y: -30px; }
+    }
 
   </style>
 </head>
