@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techscription</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Centered Container */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Diwali Text */
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      position: relative;
+      color: #ffdd44;
+      text-shadow: 0 0 10px #ffdd44, 0 0 20px #ffa500;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    /* Crackers (small dots with animation) */
+    .cracker {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ff4747;
+      animation: explode 1s infinite ease-in-out;
+      box-shadow: 0 0 10px #ff4747;
+    }
+
+    /* Keyframes for Glow Effect */
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #56e746, 0 0 20px #56e746;
+      }
+      to {
+        text-shadow: 0 0 20px #56e746, 0 0 30px #56e746;
+      }
+    }
+
+    /* Keyframes for Crackers Animation */
+    @keyframes explode {
+      0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--x), var(--y)) scale(0.1);
+        opacity: 0;
+      }
+    }
+
+    /* Cracker Positions */
+    .cracker:nth-child(1) { --x: -100px; --y: -100px; }
+    .cracker:nth-child(2) { --x: 50px; --y: -80px; }
+    .cracker:nth-child(3) { --x: -60px; --y: 100px; }
+    .cracker:nth-child(4) { --x: 90px; --y: 60px; }
+    .cracker:nth-child(5) { --x: -80px; --y: 40px; }
+    .cracker:nth-child(6) { --x: 120px; --y: -40px; }
+
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Happy Diwali Techscription Team</h1>
+    <!-- Crackers positioned around the text -->
+    <div class="cracker"></div>
+    <div class="cracker"></div>
+    <div class="cracker"></div>
+    <div class="cracker"></div>
+    <div class="cracker"></div>
+    <div class="cracker"></div>
+  </div>
+</body>
+</html>
